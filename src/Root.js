@@ -6,17 +6,21 @@ import Home from "./Home";
 import Portfolio from "./Portfolio";
 import BlogPosts from "./BlogPosts";
 import Contact from "./Contact";
+import Header from "./Header";
 
 function Root() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/portfolio" component={Portfolio} />
-        <Route path="/blog-posts" component={BlogPosts} />
-        <Route path="/contact" component={Contact} />
-      </Switch>
-    </Router>
+    <>
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/portfolio" component={Portfolio} />
+          <Route path="/blog-posts" component={BlogPosts} />
+          <Route path="/contact" component={Contact} />
+        </Switch>
+      </Router>
+    </>
   );
 }
 
