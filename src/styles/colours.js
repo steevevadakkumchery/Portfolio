@@ -6,3 +6,5 @@ const colours = {
   veryLightGrey: "#BDBDBD",
   white: "#FFFFFF"
 };
+
+export default colours;
