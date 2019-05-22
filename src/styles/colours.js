@@ -5,7 +5,7 @@ const colours = {
   lightGrey: "#9E9E9E",
   veryLightGrey: "#BDBDBD",
   white: "#FFFFFF",
-  seeThrough: "rgba(0, 0, 0, 0)"
+  transparent: "rgba(0, 0, 0, 0)"
 };
 
 export default colours;
