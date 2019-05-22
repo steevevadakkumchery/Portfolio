@@ -4,7 +4,8 @@ const colours = {
   mediumGrey: "#757575",
   lightGrey: "#9E9E9E",
   veryLightGrey: "#BDBDBD",
-  white: "#FFFFFF"
+  white: "#FFFFFF",
+  seeThrough: "rgba(0, 0, 0, 0)"
 };
 
 export default colours;
