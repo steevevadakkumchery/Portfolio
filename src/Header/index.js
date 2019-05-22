@@ -3,19 +3,23 @@ import styled from "styled-components";
 import colours from "../styles/colours";
 import { Link } from "react-router-dom";
 
-const { black, white, mediumGrey, darkGrey } = colours;
+const { black, white, mediumGrey, darkGrey, seeThrough } = colours;
 
 const HeaderParameter = styled.div`
   display: flex;
-  justify-content: flex-end;
-  padding: 10px 20px;
-  background-color: ${black};
+  justify-content: center;
+  background-color: ${black}
   color: ${white};
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    justify-content: flex-end;
+  }
 `;
 
 const BurgerMenu = styled.div`
-  font-size: 40px;
-  border-radius: 5px;
+  align-self: flex-start;
+  font-size: 30px;
   padding: 5px 10px;
 
   :hover {
@@ -30,17 +34,19 @@ const BurgerMenu = styled.div`
 const NavItems = styled.ul`
   display: flex;
   justify-content: space-around;
-  width: 500px;
+  width: 800px;
+  padding: 0;
   list-style: none;
 `;
 
 const Items = styled.li`
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  padding-bottom: 5px;
+  border-bottom: 1px solid ${seeThrough};
 
   :hover {
-    background-color: ${mediumGrey};
+    border-bottom: 1px solid white;
   }
 
   :active {
@@ -75,16 +81,16 @@ const Header = () => {
       {screenWidth >= 768 && (
         <NavItems>
           <Items>
-            <StyledLink to="/">Home</StyledLink>
+            <StyledLink to="/">HOME</StyledLink>
           </Items>
           <Items>
-            <StyledLink to="/portfolio">Portfolio</StyledLink>
+            <StyledLink to="/portfolio">PORTFOLIO</StyledLink>
           </Items>
           <Items>
-            <StyledLink to="/contact">Contact</StyledLink>
+            <StyledLink to="/contact">CONTACT</StyledLink>
           </Items>
           <Items>
-            <StyledLink to="/blog-posts">Blog Posts</StyledLink>
+            <StyledLink to="/blog-posts">BLOG POSTS</StyledLink>
           </Items>
         </NavItems>
       )}
