@@ -79,7 +79,7 @@ const Header = () => {
   }, []);
 
   const navItems = navItemsList.map(({ name, path }) => (
-    <Items>
+    <Items key={name}>
       <StyledLink to={path}>{name.toUpperCase()}</StyledLink>
     </Items>
   ));
@@ -89,7 +89,7 @@ const Header = () => {
       {/* Mobile view */}
       {screenWidth < mobileBreakPoint && (
         <BurgerMenu>
-          <i class="fas fa-bars" />
+          <i className="fas fa-bars" />
         </BurgerMenu>
       )}
 
